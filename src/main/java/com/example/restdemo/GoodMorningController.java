@@ -4,8 +4,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.annotation.security.RolesAllowed;
-
 @RestController
 public class GoodMorningController {
 
@@ -16,7 +14,6 @@ public class GoodMorningController {
     }
 
     @PostMapping(path = "/good-morning")
-    @RolesAllowed({ "sy" })
     public String hello2(){
         return "hello good morning post";
     }
